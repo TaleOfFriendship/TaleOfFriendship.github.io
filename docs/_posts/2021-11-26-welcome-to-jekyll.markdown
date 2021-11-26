@@ -1,5 +1,6 @@
 ---
-layout: post
+permalink: jekyll/
+layout: default
 title:  "Welcome to Jekyll!"
 date:   2021-11-26 11:52:33 +0100
 categories: jekyll update
