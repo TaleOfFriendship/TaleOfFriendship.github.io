@@ -17,7 +17,7 @@ In my experience the most important part of a Data Science Use-Case is understan
 1. An approximate answer to the right q is better than an exact answer to the wrong q
 2. Getting Buy-In from stakeholders is one of the hardest and most important things in Data Science. Show them that you understand the business makes them trust you and your recommendations more.
 
-
+The obvious solution to this is learning more about business. While I agree, it feels like there should be some better way of organizing it, since there are a lot of different
 business understanding, data sources and pipelines, modeling, testing, deployment, presentation, a lot to ask
 
 This is asking for a lot of one person. -> Data Science has a leraning curve that stays steep for a long time. Knowing more after you already know a lot still can have a big effect compared to other jobs with flatter learning curves
