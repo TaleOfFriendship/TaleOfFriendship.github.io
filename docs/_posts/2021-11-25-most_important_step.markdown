@@ -6,6 +6,8 @@ date:   2021-11-26 11:52:33 +0100
 categories: non-technical
 ---
 
+![If you are a hacker hands up where I can see them](/assets/DnZiwX-UwAAfv7p.jpg)
+
 What is the most important organ of the human body? Is it the heart? The lungs? Brain? They are all literally vital, so the question seems pointless, but I will try answering anyways. I am not a Doctor, I don't care.
 
 Well not quite, I will give my opinion on what I think the most important step in a Data Science Use-Case is. This is also a complex system that combines many steps, all of which are vital for a Use-Case to produces business value.
