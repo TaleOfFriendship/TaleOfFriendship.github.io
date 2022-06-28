@@ -1,0 +1,40 @@
+---
+permalink: 20220628_tb1_p_values/
+layout: default
+title:  "Tidbit 1: P-Values"
+date:   2022-06-26 11:32:33 +0100
+categories: non-technical
+---
+
+# {{ page.title }}
+<sup>Tidbit series: How to explain Data Science concepts to anyone.
+</sup>
+&nbsp;
+
+### Quick explanation
+
+A quick first explanation I like is borrowed from [Cassie Kozyrkov](https://www.youtube.com/watch?v=gjF4RKJ-m6s){:target="_blank"}: 
+
+- _The lower the p-value is, the more likely someone was surprised by something._
+
+What I like about this explanation is it conveys intuitively the limited explanatory power a p-value has in isolation. It is pretty much useless without the associated analysis but can be valuable in context.
+
+### Conceptual explanation:
+
+The best thing is a proof that what you find is true. A p-value can not give you that.<br>
+The next best thing is a likelihood that something is true. A p-value can also not give you that.<br>
+All a p-value does is the following: <br>
+
+- _The p value tells you how plausible the explenation: "The effect we see is just coincidence" is._
+
+The idea behind this is simple: Usually when you find an effect in the data there are 3 possible explanations for it:
+
+1. The effect is real and that is why we see the effect in the data (_duh_)
+2. The effect is not real and the reason is some bias in the data / analysis
+3. The effect is not real and the reason is just random chance that lead to it
+
+If we have a randomized trial (or some other causal identification strategy) we can eliminate case 2.<br>
+A low p-value makes case 3 unreasonable as well. <br>
+Viola! Only reason 1 is left and that is how you conclude that an effect is real with the help of p-values.
+
+An explanation of why things are done this way leads us to the philosophy of how to quantify uncertainty in frequentist versus bayesian statistcs, which could be the topic of another tidbit in the future.
