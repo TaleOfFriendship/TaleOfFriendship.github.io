@@ -10,7 +10,7 @@ categories: non-technical
 
 &nbsp;
 
-As a follow up to my article of what the [most important step]({% link _posts/2022-06-25-most_important_step.markdown %}) is, I want to clarify how to work with it.
+As a follow up to my article of what the [most important step]({% link _posts/2022-06-25-most_important_step.markdown %}){:target="_blank"} is, I want to clarify how to work with it.
 
 Clarifying the business need has some immediate advantages:
 
