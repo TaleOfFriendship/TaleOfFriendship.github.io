@@ -1,0 +1,40 @@
+---
+permalink: 20220625_most_important_step/
+layout: default
+title:  "Most Important Step"
+date:   2022-06-25 11:52:33 +0100
+categories: non-technical
+---
+
+# {{ page.title }}
+
+&nbsp;
+
+{% comment %}
+![If you are a hacker hands up where I can see them](/assets/DnZiwX-UwAAfv7p.jpg)
+
+{% endcomment %}
+
+What is the most important organ of the human body? Is it the heart? The lungs? Brain? They are all vital, so the question seems pointless, but I will try answering anyways. Well, not exactly this question, I am not a Doctor, but I will answer the Data Science version of it.
+
+To get to a Data Science solution you also combine many steps, all of which are vital for a Use-Case to produces business value. My life may not depend on it, but which toothbrush Benny gets recommended does.
+
+In my experience the most important part of a Data Science Use-Case is understanding the business question. There are 2 main reasons for this:
+
+1. An approximate answer to the right question is better than an exact answer to the wrong question.
+2. Getting Buy-In from stakeholders is one of the hardest and most important things in Data Science. Show them that you understand the business makes them trust you and your recommendations more.
+
+The obvious solution to this is learning more about the business. So if I have the goal of improving a Use-Case and I have the choice of improving my understanding of one of the areas:
+
+* business
+* data sourcing and pipelines
+* modeling
+* software engineering and testing
+* deployment
+* presentation
+
+I try to focus on the business side.
+
+All of this is a lot to ask of one person, which is why most companies nowadays split them up to roles like Product Manager, Data Engineer, Data Scientist and Machine Learning Engineer.
+
+Of course noone can be an expert in all of those things, but I think having a decent grasp on all of this helps in communication in your day to day if you work on Data products -> Data Science has a leraning curve that stays steep for a long time. Knowing more after you already know a lot can still have a big effect. This is one big reason I am drawn to this profession.

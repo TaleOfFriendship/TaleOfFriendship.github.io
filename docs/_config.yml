@@ -21,8 +21,7 @@
 title: Statistics Tidbits
 email: alfonsdauer@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Blog about statistics, data science, data engineering and machine learning. 
-  Posts will be some random thoughts.
+  Blog about data science. Mostly ramblings, occasionally useful.
 baseurl: "" # the subpath of your site, e.g. /blog
 domain: statisticstidbits.com
 url: "https://statisticstidbits.com/" # the base hostname & protocol for your site, e.g. http://example.com
