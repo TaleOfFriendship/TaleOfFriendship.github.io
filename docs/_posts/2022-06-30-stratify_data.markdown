@@ -1,7 +1,7 @@
 ---
 permalink: 20220630_stratify_data/
 layout: post
-title:  "Should you stratify your data? The answer may shock you!"
+title:  "Should you stratify your data? The answer will shock you!"
 date:   2022-06-30 11:32:33 +0100
 categories: non-technical
 ---
