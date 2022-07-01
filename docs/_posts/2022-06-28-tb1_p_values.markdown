@@ -10,7 +10,7 @@ categories: non-technical
 </sup>
 &nbsp;
 
-A p-value is used to test a Hypothesis. But what is a P-value exactly?
+A p-value is used in Null hypothesis significance testing. But what is a P-value exactly?
 
 ### Quick explanation
 
@@ -18,9 +18,9 @@ A quick first explanation I like is borrowed from [Cassie Kozyrkov](https://www.
 
 - _The lower the p-value is, the more likely someone was surprised by something._
 
-What I like about this explanation is that it conveys intuitively the limited explanatory power a p-value has in isolation. It is pretty much useless without the associated analysis and needs context to be valuable.
+This does not say a lot now, does it? This is deliberate. What I like about this explanation is that it conveys intuitively the limited explanatory power a p-value has in isolation. It is pretty much useless without the associated analysis and needs context to be valuable.
 
-### More thorough conceptual explanation
+### Conceptual explanation
 
 Let us dream for a second:<br>
 The best thing we could get is proof that what you find is true. A p-value can not give you that.<br>
@@ -32,11 +32,11 @@ All a p-value does is the following: <br>
 The idea behind this is simple: Usually when you find an effect in the data there are 3 possible explanations for it:
 
 1. The effect is real and that is why we see the effect in the data. (_duh_)
-2. The effect is not real and the reason is some bias in the data / analysis.
-3. The effect is not real and the reason is just random chance that lead to it.
+2. The effect is not real and the reason is some bias in the data / analysis / population.
+3. The effect is not real and the reason is just random chance that the data turned out this way.
 
-If we have a randomized trial (or some other causal identification strategy) we can eliminate case 2.<br>
+If we have a good study design (randomization or some other causal identification strategy can often be enough) we can eliminate case 2.<br>
 A low p-value makes case 3 unreasonable as well. <br>
-Viola! Only reason 1 is left, and that is how you conclude that an effect is real with the help of p-values.
+Viola! Only case 1 is left, and that is how you conclude that an effect is real with the help of p-values.
 
 An explanation of why things are done this way leads us to the philosophy of how to quantify uncertainty in frequentist versus bayesian statistics, which could be the topic of another tidbit in the future.
