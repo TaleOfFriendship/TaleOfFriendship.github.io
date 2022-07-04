@@ -37,7 +37,7 @@ Understanding the business has a big impact on the implementation:
 * Look at available data: Which data do I need for it? (Business knowledge useful/ business person can help)
 * Which data is available and are there any special things to consider? (Data Anaylsts know a lot about data, data engineers know about potential quirks in etl-pipeline
 
-If all of this is handled well, the final presentation can almost be finished without having written a single line of code! A general outline can look like:
+If all of this is handled well, you can in theory create almost the entire final presentation before having trained any model or written any line of code!  A general outline usually looks like this:
 
 1. State business problem
 2. How are we trying to solve it? (Mapping business problems to quantifiable statistics / KPI for model/analysis, how a model will be deployed to solve it)
