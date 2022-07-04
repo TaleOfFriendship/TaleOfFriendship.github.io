@@ -10,7 +10,7 @@ categories: non-technical
 </sup>
 &nbsp;
 
-A p-value is used in Null hypothesis significance testing. But what is a P-value exactly?
+A p-value is used in Null hypothesis significance testing. It is tricky to understand and easy to misunderstand, so explaining it to people is a thankless undertaking.  Here is my approach:
 
 ### Quick explanation
 
@@ -18,22 +18,24 @@ A quick first explanation I like is borrowed from [Cassie Kozyrkov](https://www.
 
 - _The lower the p-value is, the more likely someone was surprised by something._
 
-This does not say a lot now, does it? This is deliberate. What I like about this explanation is that it conveys intuitively the limited explanatory power a p-value has in isolation. It is pretty much useless without the associated analysis and needs context to be valuable.
+The vagueness of that explanation is what I like about it. It conveys intuitively the limited explanatory power a p-value has in isolation. It is pretty much useless without the associated analysis and needs context to be valuable.
+
+If that is not enough another approach I like is the conceptual explanation.
 
 ### Conceptual explanation
 
 Let us dream for a second:<br>
-The best thing we could get is proof that what you find is true. A p-value can not give you that.<br>
-The next best thing is likelihood that something is true. A p-value can also not give you that.<br>
+When testing a Hypothesis, the best thing we could get is proof that what we test is true or untrue. A p-value can not give us that.<br>
+The next best thing is the likelihood that something is true. A p-value can also not give us that.<br>
 All a p-value does is the following: <br>
 
-- _The p value tells you how plausible the explanation: "The effect we see is just coincidence" is._
+- _The p value tells you how plausible the explanation "The effect we see is just coincidence" is._
 
-The idea behind this is simple: Usually when you find an effect in the data there are 3 possible explanations for it:
+Why do we define it this way? The idea behind this is simple: Usually when you find an effect in the data there are 3 possible explanations for it:
 
 1. The effect is real and that is why we see the effect in the data. (_duh_)
-2. The effect is not real and the reason is some bias in the data / analysis / population.
-3. The effect is not real and the reason is just random chance that the data turned out this way.
+2. The effect is **not** real and the reason is some bias in the data / analysis / population.
+3. The effect is **not** real and the reason is just random chance that the data turned out this way.
 
 If we have a good study design (randomization or some other causal identification strategy can often be enough) we can eliminate case 2.<br>
 A low p-value makes case 3 unreasonable as well. <br>
