@@ -12,8 +12,8 @@ Well, I don't quite agree with that point. <br>
 
 In a causal setting focused on inference stratification can be useful, for example to [deal with non-representative data](https://statmodeling.stat.columbia.edu/2019/08/22/multilevel-structured-regression-and-post-stratification/){:target="_blank"} or to [increase power](http://blog.mrwaddell.net/archives/776){:target="_blank"}. In those cases I am all for it, and if it is possible to do there is little reason not to.
 
-However, most of Machine Learning is about prediction. Here it is not clear to me why you should do this. <br>
-My reasoing starts with a question: Why do we use a test set at all? It is to get a grasp on how the model works on new unseen data. The main point is that there is no guarantee that new data will be stratified. In fact, data tends to drift and starts looking differently with time, which is the opposite of stratification. <br>
+However, most of Machine Learning is about prediction. It is not clear to me why you should do this here. <br>
+My reasoning starts with a question: Why do we use a test set at all? - It is to get a grasp on how the model works on new unseen data. There is no guarantee that new data will be stratified. In fact, data tends to drift and starts looking differently with time, which is the opposite of stratification. <br>
 So if we only test or validate our model on a stratified data set, it sets unrealistic expectations and will not be representative of real world model performance in production. What if we have a model that works well on nice balanced strata data sets but does not work on unbalanced data sets? <br>
 
 Another issue is, if you stratify on a feature / label where predictions are good for data points with a specific value A of that feature but bad for another value B of that feature. The validation metrics will be around the same for each strata and the Data Scientist can make claims like the model never being worse than X% or whatever, backed up by cross validation. Then production comes around with a lot of value B data points and your real performance will be much worse than anything you have seen in validation.<br>
