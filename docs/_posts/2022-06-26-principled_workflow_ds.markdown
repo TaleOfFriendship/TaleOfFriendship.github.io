@@ -33,6 +33,7 @@ Understanding the business has a big impact on the implementation:
 * Stating success criteria: When is the solution good enough, how does it translate to business value, comparison to a benchmark possible?
 * Defining guard rail metrics - metrics that should not be effected negatively while testing/using the model
 * Loss function: Business Impact of False Positives vs False Negatives, how much deviation is bad, what general metrics fit the business intuition the best? 
+* Whatever metric we focus on, will the focus on this metric lead to unwanted incentives? (Goodhart's Law)
 * Human-in-the-loop: How can human interaction overwrite the model if necessary? Is it even necessary?
 * Look at available data: Which data do I need for it? (Business knowledge useful/ business person can help)
 * Which data is available and are there any special things to consider? (Data Anaylsts know a lot about data, data engineers know about potential quirks in etl-pipeline
