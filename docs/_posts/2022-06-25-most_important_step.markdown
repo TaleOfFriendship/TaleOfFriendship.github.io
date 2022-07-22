@@ -9,7 +9,7 @@ categories: non-technical
 &nbsp;
 
 {% comment %}
-![If you are a hacker hands up where I can see them](/assets/DnZiwX-UwAAfv7p.jpg)
+![If you are a hacker hands up where I can see them](/assets/otter.jpg)
 
 {% endcomment %}
 
