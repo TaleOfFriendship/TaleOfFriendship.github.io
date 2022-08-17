@@ -17,7 +17,7 @@ Long-held folklore wisdom says Dummy encoding (n-1  method) is the way to go bec
 
 The original impetus for why I wanted to write this post is that, in general,  I think you should **not** drop a value and put it in the baseline. I am going to argue that One-Hot encoding is usually superior. Of course the difference will usually be negligible; but when in doubt, why not use the more principled option.<br>
 
-The main reason is only relevant if one uses parameter-specific regularization like ridge or lasso.
+The main reason is relevant if one uses parameter-specific regularization like ridge or lasso.
 Using one value as a baseline in Dummy encoding can lead to unexpected consequences. To explain why, I will use an excerpt of the book [Elements of Statistical Learning](https://hastie.su.domains/Papers/ESLII.pdf){:target="_blank"} (page 64), where the authors writes in a chapter about ridge regularization:
 
 * _Penalization of the intercept would make the procedure depend on the origin chosen for Y ; that is, adding a constant c to each of the targets yi would not simply result in a shift of the predictions by the same amount c._
