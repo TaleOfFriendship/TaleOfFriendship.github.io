@@ -19,6 +19,11 @@ Clarifying the business needs has some immediate advantages:
 The last part is the most relevant one here. The success of Data Science is coupled with how much stakeholder buy-in exists for Data-related solutions. 
 They often cannot tell the difference between a good and a bad technical implementation of a model, but they can tell the difference between a good and a bad business understanding. It's easier for them to trust your results, if they feel like you understand the business. 
 
+<figure style="text-align: center; margin: 2em 0;">
+  <img src="/assets/cut_down_tree.png" alt="Cut down tree" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+  <figcaption style="font-style: italic; color: #666; margin-top: 0.5em;">"If I only had an hour to chop down a tree, I would spend the first 45 minutes sharpening my axe."<br>- Lincoln, who would've been a very slow lumberjack or developer</figcaption>
+</figure>
+
 Even from a technical perspective, it is good if all goals are aligned (algorithm <-> business question <-> KPI of departement/how success of the departement is measured). 
 
 {% comment %}

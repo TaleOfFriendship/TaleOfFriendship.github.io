@@ -1,7 +1,23 @@
 ---
 layout: default
 ---
-
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+<script>
+  // Update Project maintained by text on all pages
+  document.addEventListener('DOMContentLoaded', function() {
+    var creditsLeft = document.querySelector('.credits.left');
+    if (creditsLeft) {
+      var link = creditsLeft.querySelector('a');
+      if (link) {
+        link.href = 'https://www.linkedin.com/in/alfons-dauer-103a6a150/';
+        link.textContent = 'Alfons Dauer';
+      } else {
+        // If no link exists, create one
+        creditsLeft.innerHTML = 'Project maintained by <a href="https://www.linkedin.com/in/alfons-dauer-103a6a150/">Alfons Dauer</a>';
+      }
+    }
+  });
+</script>
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 

@@ -21,7 +21,7 @@
 title: Statistics Tidbits
 email: alfonsdauer@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Blog about data science.<br>
+  Blog about Data Science.<br>
   Just rambling, occasionally making sense.
 baseurl: "" # the subpath of your site, e.g. /blog
 domain: statisticstidbits.com

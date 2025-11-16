@@ -1,0 +1,9 @@
+/* Hide the View on GitHub button on all pages */
+li.fork,
+.fork,
+nav ul li.fork,
+#header nav ul li.fork {
+  display: none !important;
+  visibility: hidden !important;
+}
+

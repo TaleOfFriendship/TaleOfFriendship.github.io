@@ -1,7 +1,7 @@
 ---
 permalink: 20220628_tb1_p_values/
 layout: post
-title:  "Tidbit 1: P-Values"
+title:  "P-Values"
 date:   2022-06-26 11:32:33 +0100
 categories: non-technical
 ---
@@ -10,7 +10,8 @@ categories: non-technical
 </sup>
 &nbsp;
 
-A p-value is used in Null hypothesis significance testing. It is tricky to understand and easy to misunderstand, so explaining it to people is a thankless undertaking.  Here is my approach:
+P-values are tricky to understand and easy to misunderstand. Great properties to become the most used statistical measure if you ask me!
+Anyway, let's talk about it.
 
 ### Quick explanation
 
@@ -39,6 +40,6 @@ Why do we define it this way? The idea behind this is simple: Usually when you f
 
 If we have a good study design (randomization or some other causal identification strategy can often be enough) we can eliminate case 2.<br>
 A low p-value makes case 3 unreasonable as well. <br>
-Viola! Only case 1 is left, and that is how you conclude that an effect is real with the help of p-values.
+Voila! Only case 1 is left, and that is how you conclude that an effect is real with the help of p-values.
 
 An explanation of why things are done this way leads us to the philosophy of how to quantify uncertainty in frequentist versus bayesian statistics, which could be the topic of another tidbit in the future.

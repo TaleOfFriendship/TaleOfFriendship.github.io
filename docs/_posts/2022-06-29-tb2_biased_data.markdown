@@ -1,7 +1,7 @@
 ---
 permalink: 20220629_tb2_biased_data/
 layout: post
-title:  "Tidbit 2: Survivorship Bias"
+title:  "Why the Monty Hall Problem is more than just a little brain teaser to fumble your crush with!"
 date:   2022-06-26 11:32:33 +0100
 categories: non-technical
 ---
@@ -15,8 +15,11 @@ categories: non-technical
 <sup>Source: https://www.rapidinsight.com/blog/the-monty-hall-problem-demystified/ 
 </sup>
 
-Ever heard of the [Monty Hall Problem](https://www.rapidinsight.com/blog/the-monty-hall-problem-demystified/){:target="_blank"}? It is the famous paradox of a seemingly arbitrary choice like switching doors increasing your chance of winning from 33% to 66%. <br>
-This kind of effect is certainly not a rare special case only encountered in the world of hypothetical logic puzzles and game shows. You will run into it a lot in day-to-day situations and understanding it can help a lot. <br>
+I will not go into any detail about the weirdly specific headline. Ever heard of the [Monty Hall Problem](https://brilliant.org/wiki/monty-hall-problem/){:target="_blank"}? It is the famous paradox of a seemingly arbitrary choice like switching doors increasing your chance of winning from 33% to 66%. <br>
+
+This kind of thing happens **all the time**. Yes, you can explain this by going [case by case](https://en.wikipedia.org/wiki/Monty_Hall_problem#Simple_solutions), but who really cares? How often do you come across this situation?
+
+Actually it's all the time.<br>
 
 It is an example of: 
 
