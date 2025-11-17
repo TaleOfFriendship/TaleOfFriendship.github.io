@@ -12,20 +12,24 @@ categories: non-technical
 
 
 ![Monty Hall problem](/assets/monty_hall.png)
-<sup>Source: https://www.rapidinsight.com/blog/the-monty-hall-problem-demystified/ 
+<sup>I will not go into any detail about the headline.
 </sup>
 
-I will not go into any detail about the weirdly specific headline. Ever heard of the [Monty Hall Problem](https://brilliant.org/wiki/monty-hall-problem/){:target="_blank"}? It is the famous paradox of a seemingly arbitrary choice like switching doors increasing your chance of winning from 33% to 66%. <br>
+Ever heard of the [Monty Hall Problem](https://brilliant.org/wiki/monty-hall-problem/){:target="_blank"}? It is the famous paradox of a seemingly arbitrary choice like switching doors increasing your chance of winning from 33% to 66%. <br>
 
-This kind of thing happens **all the time**. Yes, you can explain this by going [case by case](https://en.wikipedia.org/wiki/Monty_Hall_problem#Simple_solutions), but who really cares? How often do you come across this situation?
+But who really cares? How often do you come across this situation? If you explain it by going [case by case](https://en.wikipedia.org/wiki/Monty_Hall_problem#Simple_solutions), it's kind a nice, i guess, but very specific to this scenario and normal people won't care.
 
-Actually it's all the time.<br>
-
-It is an example of: 
+However, this kind of thing happens **all the time**. It is an example of: 
 
 ### Survivorship bias
 
-A situation where this concept is more obvious is when you go to your local fish market to buy fresh fish. <br>
+A similar situation is when you go to your local fish market to buy fresh fish. <br>
+
+<figure style="text-align: center; margin: 2em 0;">
+  <img src="/assets/fishies.jpg" alt="Fishies" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+  <figcaption style="font-style: italic; color: #666; margin-top: 0.5em;">PSA: Fishes are not goats. Or are they?</figcaption>
+</figure>
+
 If you go very early, you have the best selection. If you go later and there is hardly any fish left, the fish that is left tends to be of lower quality. Maybe it is smaller, has some dent marks, visible damage etc.<br>
 In principle this is the same as the Monty Hall problem. The fish that "survives" not being bought survives because of some properties it has (In this case negative ones), whereas in the Monty Hall problem the door that "survives", survives because of positive properties (The host eliminates bad doors), so the survivors are not representative of the sample and either worse (fish) or better (doors) than the average.
 
