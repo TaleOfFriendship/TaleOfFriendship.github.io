@@ -16,9 +16,10 @@ COPY --chown=jekyll:jekyll Gemfile ./
 # Install dependencies
 # Purpose: Install all Ruby gems (Jekyll, plugins, etc.) before copying source code
 # This way, if only content changes, we don't reinstall gems
-# Note: The jekyll user needs write access to create Gemfile.lock
+# Install to local vendor/bundle directory to avoid permission issues
 USER jekyll
-RUN bundle install
+RUN bundle config set --local path 'vendor/bundle' && \
+    bundle install
 USER root
 
 # Copy the rest of the site files
@@ -35,4 +36,3 @@ EXPOSE 4000
 # --force_polling is needed for Docker on Windows/Mac (file system watching issues)
 # --livereload enables auto-refresh in browser when files change
 CMD ["jekyll", "serve", "--force_polling", "--livereload", "--host", "0.0.0.0"]
-
