@@ -27,6 +27,10 @@ USER root
 # Use --chown to set proper ownership for the jekyll user
 COPY --chown=jekyll:jekyll . .
 
+# Set environment variable for GitHub Pages
+# Purpose: Jekyll needs repository information for GitHub Pages features
+ENV PAGES_REPO_NWO=TaleOfFriendship/TaleOfFriendship.github.io
+
 # Expose port 4000
 # Purpose: Jekyll's default port. This tells Docker which port the container will use
 EXPOSE 4000
