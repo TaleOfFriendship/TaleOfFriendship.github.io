@@ -8,7 +8,7 @@ This is a Jekyll-based blog hosted on GitHub Pages. The site is built using the 
 
 ## Setup
 
-### Option 1: Using Docker (Recommended for Learning)
+### Option 1: Using Docker (Recommended)
 
 **Prerequisites:**
 - Docker Desktop installed ([Download here](https://www.docker.com/products/docker-desktop))
@@ -17,7 +17,7 @@ This is a Jekyll-based blog hosted on GitHub Pages. The site is built using the 
 - No need to install Ruby or Jekyll locally
 - Consistent environment across different machines
 - Easy to share with others
-- Great for learning containerization
+- Isolated environment for development
 
 **Steps:**
 
@@ -134,7 +134,7 @@ This project supports multiple CI/CD solutions:
 - Go to the "Actions" tab in your GitHub repository
 - See build logs and test results
 
-### Jenkins (Optional - For Learning)
+### Jenkins (Optional)
 
 The repository includes a `Jenkinsfile` for Jenkins CI/CD.
 
@@ -146,7 +146,6 @@ The repository includes a `Jenkinsfile` for Jenkins CI/CD.
 
 **Benefits of Jenkins:**
 - Self-hosted (full control)
-- Great for learning CI/CD concepts
 - Highly customizable
 - Can run alongside GitHub Actions
 
@@ -159,7 +158,7 @@ The repository includes a `Jenkinsfile` for Jenkins CI/CD.
 **Benefits:**
 - Catch errors before they reach production
 - Ensure site always builds successfully
-- Learn CI/CD best practices
+- Automated testing and deployment
 
 ## Deployment
 

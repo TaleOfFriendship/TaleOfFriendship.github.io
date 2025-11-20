@@ -67,7 +67,7 @@ jobs:
         # Check that at least one post was generated
         test -d 20220705_dummy_encoding && echo "✓ Posts generated"
 
-  # Job 2: Build Docker image (optional, for learning)
+  # Job 2: Build Docker image
   docker-build:
     runs-on: ubuntu-latest
     
@@ -94,8 +94,20 @@ jobs:
         cd docs
         # Start container in background
         docker run -d -p 4000:4000 --name jekyll-test jekyll-blog:test
-        # Wait for Jekyll to start
-        sleep 10
+        # Wait for Jekyll to start (with retries)
+        echo "Waiting for Jekyll to start..."
+        for i in {1..30}; do
+          if curl -f -s http://localhost:4000 > /dev/null 2>&1; then
+            echo "✓ Jekyll is ready!"
+            break
+          fi
+          if [ $i -eq 30 ]; then
+            echo "✗ Jekyll failed to start after 30 attempts"
+            docker logs jekyll-test
+            exit 1
+          fi
+          sleep 2
+        done
         # Test that the site is accessible
         curl -f http://localhost:4000 || exit 1
         # Clean up
