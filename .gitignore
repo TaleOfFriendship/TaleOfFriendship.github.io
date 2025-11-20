@@ -45,3 +45,10 @@ yarn-error.log*
 *.temp
 .cache/
 
+# Guide and documentation files (not part of the blog content)
+*-guide.md
+*-setup.md
+debugging-*.md
+jenkins-setup.md
+seo-guide.md
+

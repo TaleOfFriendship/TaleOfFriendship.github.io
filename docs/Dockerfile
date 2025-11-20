@@ -18,9 +18,10 @@ COPY --chown=jekyll:jekyll Gemfile ./
 # Purpose: Install all Ruby gems (Jekyll, plugins, etc.) before copying source code
 # This way, if only content changes, we don't reinstall gems
 # Install to local vendor/bundle directory to avoid permission issues
+# Update rubygems as root (needs system permissions), then switch to jekyll user
+RUN gem update --system
 USER jekyll
-RUN gem update --system && \
-    bundle config set --local path 'vendor/bundle' && \
+RUN bundle config set --local path 'vendor/bundle' && \
     bundle install
 USER root
 
