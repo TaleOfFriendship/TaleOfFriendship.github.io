@@ -1,0 +1,22 @@
+{
+  "name": "Statistics Tidbits",
+  "short_name": "Stats Tidbits",
+  "description": "Blog about Statistics and Data Science",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#353535",
+  "background_color": "#252525",
+  "display": "standalone",
+  "start_url": "/"
+}
+

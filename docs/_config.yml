@@ -21,13 +21,19 @@
 title: Statistics Tidbits
 email: alfonsdauer@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Blog about Data Science.<br>
+  Blog about Statistics.<br>
   Just rambling, occasionally making sense.
 baseurl: "" # the subpath of your site, e.g. /blog
 domain: statisticstidbits.com
 url: "https://statisticstidbits.com/" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
+
+# SEO Settings
+author: Alfons Dauer
+keywords: statistics, data science, machine learning, statistics blog, data analysis, statistical methods
+lang: en
+timezone: Europe/Berlin
 
 # Build settings
 theme:  jekyll-theme-midnight

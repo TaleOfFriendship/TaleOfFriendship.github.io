@@ -121,7 +121,9 @@ YYYY-MM-DD-post-title.markdown
 
 ## CI/CD Pipeline
 
-This project uses GitHub Actions for Continuous Integration/Continuous Deployment.
+This project supports multiple CI/CD solutions:
+
+### GitHub Actions (Currently Active)
 
 **What it does:**
 - **On every push**: Automatically builds and tests your Jekyll site
@@ -131,6 +133,28 @@ This project uses GitHub Actions for Continuous Integration/Continuous Deploymen
 **View CI/CD status:**
 - Go to the "Actions" tab in your GitHub repository
 - See build logs and test results
+
+### Jenkins (Optional - For Learning)
+
+The repository includes a `Jenkinsfile` for Jenkins CI/CD.
+
+**Setup:**
+- See `docs/jenkins-setup.md` for detailed setup instructions
+- Two versions available:
+  - `Jenkinsfile` - Full pipeline with Docker
+  - `Jenkinsfile.simple` - Simple version without Docker
+
+**Benefits of Jenkins:**
+- Self-hosted (full control)
+- Great for learning CI/CD concepts
+- Highly customizable
+- Can run alongside GitHub Actions
+
+**Benefits of GitHub Actions:**
+- Cloud-hosted (no server needed)
+- Easy setup
+- Integrated with GitHub
+- Free for public repositories
 
 **Benefits:**
 - Catch errors before they reach production

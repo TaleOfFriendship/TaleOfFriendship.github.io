@@ -1,12 +1,12 @@
 ---
 permalink: 20220705_dummy_encoding/
 layout: post
-title:  "One-Hot and Dummy encoding are not the same and the difference is important (sometimes)"
+title:  "The difference between One-Hot and Dummy encoding and why it matters (sometimes)"
 date:   2022-07-05 11:32:33 +0100
 categories: non-technical
 ---
 
-Caution: This article deals with nuances in feature engineering and might not be for every practically minded reader.
+Caution: This article deals with nuances in feature engineering and might not be for every practically minded reader. But since Feature Engineering is one of the few technical steps that actually matter, a short article on this is fine doing.
 
 Now that we got that out of the way, I'll use the following definitions: 
 - One-Hot: Encode a categorical variable with n classes into **n** column

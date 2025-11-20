@@ -7,19 +7,24 @@ FROM jekyll/jekyll:4.2.2
 # Purpose: All commands will run from this directory
 WORKDIR /srv/jekyll
 
-# Copy the Gemfile and Gemfile.lock first
+# Copy the Gemfile
 # Purpose: Docker caches layers - if dependencies don't change, we don't need to reinstall gems
 # This is called "layer caching" and speeds up builds
-COPY Gemfile Gemfile.lock ./
+# Note: Gemfile.lock is optional - bundle install will work without it
+COPY --chown=jekyll:jekyll Gemfile ./
 
 # Install dependencies
 # Purpose: Install all Ruby gems (Jekyll, plugins, etc.) before copying source code
 # This way, if only content changes, we don't reinstall gems
+# Note: The jekyll user needs write access to create Gemfile.lock
+USER jekyll
 RUN bundle install
+USER root
 
 # Copy the rest of the site files
 # Purpose: Now copy all your blog posts, configs, assets, etc.
-COPY . .
+# Use --chown to set proper ownership for the jekyll user
+COPY --chown=jekyll:jekyll . .
 
 # Expose port 4000
 # Purpose: Jekyll's default port. This tells Docker which port the container will use

@@ -1,9 +1,13 @@
 ---
 layout: default
 ---
-<link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
-<link rel="icon" type="image/png" href="{{ '/favicon.png' | relative_url }}">
-<link rel="apple-touch-icon" href="{{ '/favicon.png' | relative_url }}">
+<!-- Favicon for all browsers and devices -->
+<!-- Adding cache-busting parameter to force browser to reload favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon.png?v=2' | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon.png?v=2' | relative_url }}">
+<link rel="shortcut icon" type="image/png" href="{{ '/favicon.png?v=2' | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/favicon.png?v=2' | relative_url }}">
+<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 <style>
   /* Navigation Button Hover Effect for Blog Posts */

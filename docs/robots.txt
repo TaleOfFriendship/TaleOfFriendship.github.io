@@ -1,0 +1,14 @@
+# robots.txt for Statistics Tidbits blog
+# Tells search engines which pages to crawl
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://statisticstidbits.com/sitemap.xml
+
+# Disallow build artifacts (if any are accessible)
+Disallow: /_site/
+Disallow: /.jekyll-cache/
+Disallow: /.sass-cache/
+

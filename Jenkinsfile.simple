@@ -1,0 +1,65 @@
+// Simple Jenkins Pipeline (without Docker)
+// Use this if you have Ruby and Jekyll installed directly on Jenkins server
+
+pipeline {
+    agent any
+    
+    environment {
+        DOCS_DIR = 'docs'
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Checking out code...'
+                checkout scm
+            }
+        }
+        
+        stage('Install Dependencies') {
+            steps {
+                echo 'Installing Ruby gems...'
+                dir("${DOCS_DIR}") {
+                    sh 'bundle install'
+                }
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                echo 'Building Jekyll site...'
+                dir("${DOCS_DIR}") {
+                    sh 'bundle exec jekyll build'
+                }
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                echo 'Testing build output...'
+                script {
+                    sh '''
+                        if [ ! -f ${DOCS_DIR}/_site/index.html ]; then
+                            echo "ERROR: Build failed - index.html not found"
+                            exit 1
+                        fi
+                        echo "✓ Build successful"
+                    '''
+                }
+            }
+        }
+    }
+    
+    post {
+        always {
+            echo 'Pipeline completed'
+        }
+        success {
+            echo '✓ Pipeline succeeded!'
+        }
+        failure {
+            echo '✗ Pipeline failed!'
+        }
+    }
+}
+
