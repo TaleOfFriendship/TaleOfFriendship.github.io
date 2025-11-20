@@ -19,7 +19,8 @@ COPY --chown=jekyll:jekyll Gemfile ./
 # This way, if only content changes, we don't reinstall gems
 # Install to local vendor/bundle directory to avoid permission issues
 USER jekyll
-RUN bundle config set --local path 'vendor/bundle' && \
+RUN gem update --system && \
+    bundle config set --local path 'vendor/bundle' && \
     bundle install
 USER root
 
