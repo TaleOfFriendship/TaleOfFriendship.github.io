@@ -1,8 +1,8 @@
-# Use the official Jekyll image as base with Ruby 2.7
+# Use the official Jekyll image as base
 # This image already has Ruby, Jekyll, and all dependencies pre-installed
 # Purpose: Start with a known-good environment instead of installing everything from scratch
-# Note: Using Ruby 2.7 because github-pages gem uses Jekyll 3.9.0 which requires Ruby 2.7
-FROM jekyll/jekyll:3.9
+# Using 'builder' tag which includes Ruby 2.7 compatible with github-pages gem
+FROM jekyll/jekyll:builder
 
 # Set the working directory inside the container
 # Purpose: All commands will run from this directory
