@@ -21,6 +21,14 @@
 {"@type":"WebSite","url":"https://statisticstidbits.com/","headline":"Statistics Tidbits: Just rambling, occasionally making sense.","name":"Statistics Tidbits","description":"A blog about statistics, data science, and machine learning. Learn about statistical methods, data analysis, and practical insights.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
+    <!-- Favicon for all browsers and devices -->
+    <!-- Adding cache-busting parameter to force browser to reload favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=4">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=4">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png?v=4">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png?v=4">
+    <link rel="manifest" href="/site.webmanifest">
+
     <link rel="stylesheet" href="/assets/css/style.css?v=abae1f7e53aa7a255f117561604f9f5e22595d2e">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="/assets/js/respond.js"></script>
@@ -44,15 +52,6 @@
 <!-- Setup Google Analytics -->
 google_analytics: UA-NNNNNNNN-N
 
-
-<!-- Favicon for all browsers and devices -->
-<!-- Adding cache-busting parameter to force browser to reload favicon -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=3">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=3">
-<link rel="shortcut icon" type="image/png" href="/favicon.png?v=3">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon.png?v=3">
-<link rel="manifest" href="/site.webmanifest">
-
 <!-- end custom head snippets -->
 <style>
   /* Hide the View on GitHub button */
@@ -73,6 +72,18 @@ google_analytics: UA-NNNNNNNN-N
     margin-top: 0 !important;
     padding-top: 0 !important;
     display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .wrapper nav ul figure {
+    margin: 0 auto !important;
+    display: block !important;
+    text-align: center;
+    width: fit-content;
+  }
+  .wrapper nav ul figure figcaption {
+    text-align: right;
+    width: 100%;
   }
   .wrapper nav {
     margin-top: 0 !important;
@@ -114,7 +125,10 @@ google_analytics: UA-NNNNNNNN-N
     <div class = "wrapper">
       <nav>
         <ul>
-          <img src="./assets/otter.jpg" alt="If you are a hacker: Hands up!">
+          <figure>
+            <img src="./assets/otter.jpg" alt="If you are a hacker: Hands up!">
+            <figcaption style="text-align: right; font-size: 0.7em; color: #888; margin-top: 0.3em; margin-bottom: 1em; font-style: italic;">© Charlie Summers</figcaption>
+          </figure>
 
           <p>&nbsp;</p> 
 
