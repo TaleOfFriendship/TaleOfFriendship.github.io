@@ -10,36 +10,53 @@ categories: non-technical
 </sup>
 &nbsp;
 
-P-values are tricky to understand and easy to misunderstand. Great properties to become the most used statistical measure if you ask me!
-Anyway, let's talk about it.
+Yes, let us talk about good'ol P-Values. 
 
-### Quick explanation
+P-values are tricky to understand and easy to misunderstand. Great properties to become the most common statistical measure if you ask me.
+
+
+### It does not have to be that way!
 
 A quick first explanation I like is borrowed from [Cassie Kozyrkov](https://www.youtube.com/watch?v=gjF4RKJ-m6s){:target="_blank"}: 
 
 - _The lower the p-value is, the more likely someone was surprised by something._
 
-The vagueness of that explanation is what I like about it. It conveys intuitively the limited explanatory power a p-value has in isolation. It is pretty much useless without the associated analysis and needs context to be valuable.
+The vagueness of that explanation is what is good about it. A p-value in isolation is not saying much. Only with the associated analysis it becomes valuable. One could also say:
 
-If that is not enough another approach I like is the conceptual explanation.
+- _The p value tells you how well a hypothesis and the data fit together._
 
-### Conceptual explanation
+### Why the P-value makes sense
 
-Let us dream for a second:<br>
-When testing a Hypothesis, the best thing we could get is proof that what we test is true or untrue. A p-value can not give us that.<br>
-The next best thing is the likelihood that something is true. A p-value can also not give us that.<br>
-All a p-value does is the following: <br>
+Let's say we did an experiment and measured some kind of effect. This effect can have mainly 3 possible explanations:
 
-- _The p value tells you how plausible the explanation "The effect we see is just coincidence" is._
+1. The effect is real and that is why we see the effect in the data. (What we usually hope for)
+2. The effect is **not** real and the reason is just coincidence.
+3. The effect is **not** real and the reason is some bias in the data / analysis / population.
 
-Why do we define it this way? The idea behind this is simple: Usually when you find an effect in the data there are 3 possible explanations for it:
+With good study design (randomization or some other causal identification strategy) we can eliminate case 3:<br>
 
-1. The effect is real and that is why we see the effect in the data. (_duh_)
-2. The effect is **not** real and the reason is some bias in the data / analysis / population.
-3. The effect is **not** real and the reason is just random chance that the data turned out this way.
+1. The effect is real and that is why we see the effect in the data. (What we usually hope for)
+2. The effect is **not** real and the reason is just coincidence.
+3. ~~The effect is **not** real and the reason is some bias in the data / analysis / population.~~
 
-If we have a good study design (randomization or some other causal identification strategy can often be enough) we can eliminate case 2.<br>
-A low p-value makes case 3 unreasonable as well. <br>
-Voila! Only case 1 is left, and that is how you conclude that an effect is real with the help of p-values.
+Now onto the **important** bit:
 
-An explanation of why things are done this way leads us to the philosophy of how to quantify uncertainty in frequentist versus bayesian statistics, which could be the topic of another tidbit in the future.
+- _The p value tells you how plausible the explanation "The effect is just coincidence" is._
+
+This means a low p-value makes case 2 an unreasonable explanation as well: <br>
+
+1. The effect is real and that is why we see the effect in the data. (What we usually hope for)
+2. ~~The effect is **not** real and the reason is just coincidence.~~
+3. ~~The effect is **not** real and the reason is some bias in the data / analysis / population.~~
+
+...and Voila! With the help of study design and low p-values, case one is the only viable explanation left, so we conclude that an effect is real. This is how p-values actually work in "proving" an effect.
+
+### Why the P-value does not make sense
+
+Instead of proving things directly, p-values do it indirectly, by showing that alternatives do not make sense. This is a bit unintuitive.
+
+When testing a Hypothesis, p-values are not what we are looking for. They are only a tool to get to what we actually want: To know if something is true or false. Unfortunately, a p-value can not give us that, it assumes the premise of the question. (Nothing can prove 100% to be fair. But p-values cannot; even philosophically)<br>
+
+The next best thing besides proving would be having the likelihood that something is true. This can also not be provided by a p-value. Frequentist statistics (of which p-values are a part of) does not quanitfy uncertainty like that.<br>
+
+In the end, the straight forward alternative to this is Bayesian statistic. Bayesian Stats does not run into these troubles, even if there are other challenges with it. But that is a topic for another time.

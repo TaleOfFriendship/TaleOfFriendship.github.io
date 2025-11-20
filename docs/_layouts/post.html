@@ -1,7 +1,27 @@
 ---
 layout: default
 ---
+<link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+<link rel="icon" type="image/png" href="{{ '/favicon.png' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/favicon.png' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+<style>
+  /* Navigation Button Hover Effect for Blog Posts */
+  footer a[href="/"]:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+  }
+  /* Make h3 headlines match h1 post-title styling exactly */
+  .post-content h3 {
+    font-size: 2em !important;
+    font-weight: normal !important;
+    color: #f8f3ea !important;
+    font-family: "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    line-height: 1.2 !important;
+    margin: 0.67em 0 !important;
+    padding: 0 !important;
+  }
+</style>
 <script>
   // Update Project maintained by text on all pages
   document.addEventListener('DOMContentLoaded', function() {
@@ -56,6 +76,15 @@ layout: default
   <footer>
     <br>
     <hr>
+    <!-- Navigation Buttons -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 2em 0;">
+      <div style="flex: 1;">
+        <a href="/" style="display: inline-block; font-size: 1em; color: #f0e7d5; text-decoration: none; padding: 0.3em 0.8em; transition: all 0.3s ease;">
+          ← Go Back
+        </a>
+      </div>
+      <div style="flex: 1;"></div>
+    </div>
   </footer>
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>

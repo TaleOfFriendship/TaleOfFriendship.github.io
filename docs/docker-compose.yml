@@ -1,0 +1,41 @@
+# Docker Compose configuration file
+# Purpose: Makes it easy to run Docker containers without remembering long commands
+# You can just run: docker-compose up
+
+version: '3.8'
+
+services:
+  # Define a service called "jekyll"
+  jekyll:
+    # Build the Docker image from the Dockerfile in the current directory
+    # Purpose: Creates a container with Jekyll and all dependencies
+    build:
+      context: .
+      dockerfile: Dockerfile
+    
+    # Map port 4000 from container to your host machine
+    # Purpose: Access the site at http://localhost:4000 on your computer
+    ports:
+      - "4000:4000"
+    
+    # Mount your local files into the container
+    # Purpose: Changes you make locally are immediately reflected in the container
+    # This is called "volume mounting" - it syncs files between host and container
+    volumes:
+      # Mount the current directory (your blog files) to /srv/jekyll in container
+      - .:/srv/jekyll
+      # Mount a volume for Jekyll's cache (persists between container restarts)
+      # Purpose: Jekyll can cache compiled files, making rebuilds faster
+      - jekyll_cache:/srv/jekyll/.jekyll-cache
+    
+    # Keep container running in foreground
+    # Purpose: See Jekyll's output logs in your terminal
+    stdin_open: true
+    tty: true
+
+# Define named volumes
+# Purpose: Persistent storage that survives container deletion
+volumes:
+  jekyll_cache:
+    # Purpose: Store Jekyll's cache outside the container so it persists
+

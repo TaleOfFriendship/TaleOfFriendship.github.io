@@ -47,7 +47,9 @@ google_analytics: UA-NNNNNNNN-N
 
 
 <!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
 
 <!-- end custom head snippets -->
 <style>
@@ -63,6 +65,25 @@ google_analytics: UA-NNNNNNNN-N
   .wrapper nav ul {
     padding-top: 0 !important;
     margin-top: 0 !important;
+    padding-left: 0 !important;
+  }
+  .wrapper nav ul img {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    display: block;
+  }
+  .wrapper nav {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  div.wrapper:last-of-type {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  /* Navigation Button Hover Effect */
+  a[href="./nothing_here/"]:hover {
+    opacity: 0.7;
+    text-decoration: underline;
   }
 </style>
 
@@ -79,7 +100,7 @@ google_analytics: UA-NNNNNNNN-N
       <section>
         <div id="title">
           <h1>Statistics Tidbits</h1>
-          <p>Blog about Data Science.<br>
+          <p>Blog about Statistics.<br>
              Just rambling, occasionally making sense.
           </p>
           <hr>
@@ -121,10 +142,20 @@ google_analytics: UA-NNNNNNNN-N
           <p>26th of June 2022</p>
 
           <h2>
-            <a href="./20220625_most_important_step/">Most Important Step in a Data Science Use-Case</a>
+            <a href="./20220625_most_important_step/">Hello World!</a>
           </h2>
           <p>25th of June 2022</p>
           <hr>
+
+          <!-- Navigation Buttons -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin: 2em 0;">
+            <div style="flex: 1;"></div>
+            <div style="flex: 1; text-align: right;">
+              <a href="./nothing_here/" style="display: inline-block; font-size: 1em; color: #f0e7d5; text-decoration: none; padding: 0.3em 0.8em; transition: all 0.3s ease;">
+                Next Page →
+              </a>
+            </div>
+          </div>
 
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></span>
         </ul>

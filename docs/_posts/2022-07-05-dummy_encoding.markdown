@@ -6,28 +6,34 @@ date:   2022-07-05 11:32:33 +0100
 categories: non-technical
 ---
 
-What am I talking about? Isn't both the same? Well, yes and no, but today I will do something I have sworn to do only to my worst enemies: Be pedantic. 
+Caution: This article deals with nuances in feature engineering and might not be for every practically minded reader.
 
-For the sake of this article I'll use these definitions: If we have a categorical variable with n possible values, One-Hot encoding transforms it into n columns and Dummy encoding transforms it into n-1 columns, with one value being the baseline.
+Now that we got that out of the way, I'll use the following definitions: 
+- One-Hot: Encode a categorical variable with n classes into **n** column
+- Dummy: Encode a categorical variable with n classes into **n-1** columns
 
-Reading through countless Medium DS articles one might think that Dummy encoding (n-1 method) is the way to go because it
+From time to time I stumble across articles that say that Dummy encoding (n-1 method) is the way to go because it
 
 - leads to less columns while keeping the same amount of information
-
 - avoids multicollinearity
 
-In general you should not drop a value and put it in the baseline. One-Hot encoding is usually superior. Of course the difference will usually be negligible; but what is life if not arguing about minute details.
+
+### Drawbacks: Not everything is nice
+
+This does sounds nice! However in general, you should not drop a category and put it in the baseline. One-Hot encoding is usually superior. Of course the difference will usually be negligible; but since I don't hear about the counterargument, I mention it here
 
 <figure style="text-align: center; margin: 2em 0;">
   <img src="/assets/base.jpg" alt="Base" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
   <figcaption style="font-style: italic; color: #666; margin-top: 0.5em;">"It's all about that base(line)"<br>- Meghan Trainer, Data Science Enthusiast</figcaption>
 </figure>
 
-The difference is relevant if one uses parameter-specific regularization like ridge or lasso. Using one value as a baseline in Dummy encoding can lead to unexpected consequences. To explain why, I will use an excerpt of the book [Elements of Statistical Learning](https://hastie.su.domains/Papers/ESLII.pdf){:target="_blank"} (page 64), where the authors writes in a chapter about ridge regularization:
+To argue why: If one uses parameter-specific regularization like ridge or lasso, using one value as a baseline in Dummy encoding can lead to unexpected consequences. To explain why, I will use an excerpt of the book [Elements of Statistical Learning](https://hastie.su.domains/Papers/ESLII.pdf){:target="_blank"} (page 64), where the authors writes in a chapter about ridge regularization:
 
 - Penalization of the intercept would make the procedure depend on the origin chosen for Y ; that is, adding a constant c to each of the targets yi would not simply result in a shift of the predictions by the same amount c.
 
 The authors use it in a more general context about any intercept term in regularized regression, but the logic is applicable to our use case. To illustrate what this means, imagine the following example:
+
+### Example: Differences Matter
 
 You have a model to predict sales for an online store. As a feature you use the sales data of 4 retail stores located in
 

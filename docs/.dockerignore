@@ -1,0 +1,40 @@
+# Jekyll build output - don't copy this into the container
+# Purpose: The _site folder is generated, we don't need it in the image
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata/
+
+# Bundler files
+# Purpose: We'll install gems inside the container, don't need vendor folder
+.bundle/
+vendor/
+
+# Git files
+# Purpose: Git history is not needed in the container
+.git/
+.gitignore
+
+# Editor files
+# Purpose: Your local editor settings aren't needed
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+# Purpose: System files from your local machine aren't needed
+.DS_Store
+Thumbs.db
+
+# Documentation
+# Purpose: README and docs aren't needed to run the site
+README.md
+*.md
+
+# Docker files themselves
+# Purpose: Don't copy Docker config into the container (would be recursive)
+Dockerfile
+docker-compose.yml
+.dockerignore
+

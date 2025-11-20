@@ -1,0 +1,104 @@
+# GitHub Actions workflow file
+# Purpose: Automatically build and test your site on every push/PR
+# This is CI/CD (Continuous Integration/Continuous Deployment)
+
+name: Jekyll CI/CD
+
+# When should this workflow run?
+# Purpose: Define triggers for automated builds
+on:
+  # Run on every push to any branch
+  # Purpose: Catch errors early, test that site still builds
+  push:
+    branches: [ master, develop, update_website ]
+  # Run on pull requests
+  # Purpose: Test PRs before merging to ensure they don't break the site
+  pull_request:
+    branches: [ master, develop ]
+
+# Define the jobs (tasks) to run
+jobs:
+  # Job 1: Build and test the Jekyll site
+  build:
+    # Run on Ubuntu (GitHub's free runners)
+    # Purpose: Consistent environment for testing
+    runs-on: ubuntu-latest
+    
+    # Steps are executed in order
+    steps:
+    # Step 1: Checkout the code
+    # Purpose: Download your repository files to the GitHub runner
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    # Step 2: Set up Ruby
+    # Purpose: Install Ruby (needed for Jekyll)
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        # Use the Ruby version specified in your Gemfile
+        ruby-version: '3.1'
+        # Install bundler (Ruby's package manager)
+        bundler-cache: true
+    
+    # Step 3: Install dependencies
+    # Purpose: Install all Jekyll gems and plugins
+    - name: Install dependencies
+      run: |
+        cd docs
+        bundle install
+    
+    # Step 4: Build the site
+    # Purpose: Test that your site builds without errors
+    # If this fails, you know there's a problem before deploying
+    - name: Build site
+      run: |
+        cd docs
+        bundle exec jekyll build
+    
+    # Step 5: Test the build output
+    # Purpose: Verify that important files were generated
+    # This is a simple test - you could add more complex tests here
+    - name: Verify build output
+      run: |
+        cd docs/_site
+        # Check that index.html exists (site built successfully)
+        test -f index.html && echo "✓ Site built successfully"
+        # Check that at least one post was generated
+        test -d 20220705_dummy_encoding && echo "✓ Posts generated"
+
+  # Job 2: Build Docker image (optional, for learning)
+  docker-build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    # Step 1: Set up Docker Buildx
+    # Purpose: Advanced Docker building features
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+    
+    # Step 2: Build the Docker image
+    # Purpose: Test that your Dockerfile works correctly
+    - name: Build Docker image
+      run: |
+        cd docs
+        docker build -t jekyll-blog:test .
+    
+    # Step 3: Test the Docker image
+    # Purpose: Verify the container can start and serve the site
+    - name: Test Docker image
+      run: |
+        cd docs
+        # Start container in background
+        docker run -d -p 4000:4000 --name jekyll-test jekyll-blog:test
+        # Wait for Jekyll to start
+        sleep 10
+        # Test that the site is accessible
+        curl -f http://localhost:4000 || exit 1
+        # Clean up
+        docker stop jekyll-test
+        docker rm jekyll-test
+

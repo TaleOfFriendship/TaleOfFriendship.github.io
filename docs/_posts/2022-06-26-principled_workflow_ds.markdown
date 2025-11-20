@@ -8,7 +8,7 @@ categories: non-technical
 
 &nbsp;
 
-As a follow up to my article about the [most important step]({% link _posts/2022-06-25-most_important_step.markdown %}){:target="_blank"}, which talks about why getting a good business understanding is, in my opinion, the most important step, I want to extend on the why and how to work on it.
+As a follow up to my article about the [most important step]({% link _posts/2022-06-25-most_important_step.markdown %}){:target="_blank"} I want to talk more about why good business understanding is the most crucial part in developing a solution.
 
 Clarifying the business needs has some immediate advantages:
 
@@ -16,15 +16,15 @@ Clarifying the business needs has some immediate advantages:
 * It makes it easier to present the solutions in the same language that business people speak and understand well
 * It ultimately makes it easier to get stakeholder buy-in
 
-The last part is the most relevant one here. The success of Data Science is coupled with how much stakeholder buy-in exists for Data-related solutions. 
-They often cannot tell the difference between a good and a bad technical implementation of a model, but they can tell the difference between a good and a bad business understanding. It's easier for them to trust your results, if they feel like you understand the business. 
+The success of Data Science is coupled with how much stakeholder buy-in exists for Data-related solutions. 
+They often cannot tell the difference between a good and a bad technical implementation of a model, but they can tell the difference between good and a bad business understanding of the presenter. It's easier for them to trust your results, if they feel like you understand the business. 
 
 <figure style="text-align: center; margin: 2em 0;">
   <img src="/assets/cut_down_tree.png" alt="Cut down tree" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
   <figcaption style="font-style: italic; color: #666; margin-top: 0.5em;">"If I only had an hour to chop down a tree, I would spend the first 45 minutes sharpening my axe."<br>- Lincoln, who would've been a very slow lumberjack or developer</figcaption>
 </figure>
 
-Even from a technical perspective, it is good if all goals are aligned (algorithm <-> business question <-> KPI of departement/how success of the departement is measured). 
+Even from a technical perspective, it is important that all goals are aligned (algorithm <-> business question <-> KPI of departement/how success of the departement is measured). 
 
 {% comment %}
 So what is the business question? Why do you want to solve this question? Why now? How will the analysis/model be used after it is done? 
