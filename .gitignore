@@ -48,7 +48,9 @@ yarn-error.log*
 # Guide and documentation files (not part of the blog content)
 *-guide.md
 *-setup.md
+*-explanation.md
 debugging-*.md
 jenkins-setup.md
 seo-guide.md
+dockerignore-explanation.md
 
