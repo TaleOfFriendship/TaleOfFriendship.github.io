@@ -10,7 +10,7 @@ on:
   # Run on every push to any branch
   # Purpose: Catch errors early, test that site still builds
   push:
-    branches: [ master, develop, update_website ]
+    branches: [ master, develop, update_website, ci_cd_development ]
   # Run on pull requests
   # Purpose: Test PRs before merging to ensure they don't break the site
   pull_request:

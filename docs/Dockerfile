@@ -18,6 +18,8 @@ COPY --chown=jekyll:jekyll Gemfile ./
 # Purpose: Install all Ruby gems (Jekyll, plugins, etc.) before copying source code
 # This way, if only content changes, we don't reinstall gems
 # Install to local vendor/bundle directory to avoid permission issues
+# Note: We don't update rubygems because Ruby 2.7.1 is incompatible with latest rubygems
+# The rubygems version that comes with Ruby 2.7.1 works fine for github-pages
 USER jekyll
 RUN bundle config set --local path 'vendor/bundle' && \
     bundle install
